@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Table with JavaScript</title>
+    <style>
+        /* CSS Styling */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="table-container"></div>
+
+    <script>
+
+        function generateTable(rows, cols) {
+
+            const container = document.getElementById('table-container');
+
+            const table = document.createElement('table');
+
+            for (let i = 1; i <= rows; i++) {
+                const row = document.createElement('tr');
+                for (let j = 1; j <= cols; j++) {
+                    const cell = document.createElement('td');
+                    cell.textContent = `Row ${i}, Col ${j}`; 
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+
+
+            container.appendChild(table);
+        }
+
+        generateTable(3, 3);
+    </script>
+</body>
+</html>

@@ -1,0 +1,546 @@
+/* General Body Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Theme Button */
+.theme-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #43584d64;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.theme-button:hover {
+  background-color: #70887c8f;
+}
+
+/* Headers */
+header {
+  background-color: #3bae75;
+  color: #fff;
+  padding: 1em 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+header h1 {
+  margin: 0;
+}
+
+.sub-header {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2a8e5b;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  text-align: center;
+  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.crime-header {
+  font-size: 1.8em;
+  color: #3bae75;
+  margin-bottom: 10px;
+}
+.forklift-feature {
+  margin-top: 20px;
+}
+
+.forklift-feature h3 {
+  font-size: 1.8rem;
+  color: #3bae75;
+  text-decoration: underline;
+}
+
+/* Navigation menu */
+nav {
+  background-color: #3a4b3f;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu > li > a {
+  display: block;
+  padding: 1em;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu > li > a:hover {
+  background-color: #ff0099;
+}
+
+.submenu {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #555;
+  display: none;
+  padding: 0;
+}
+
+.submenu li {
+  border-bottom: 1px solid #444;
+}
+
+.submenu li a {
+  padding: 0.8em 1.2em;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.submenu li a:hover {
+  background-color: #777;
+}
+
+.menu > li:hover .submenu {
+  display: block;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #2c3e50;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero p:last-child {
+  font-size: 1rem;
+}
+
+
+
+/* Main Section */
+main {
+  padding: 2em;
+}
+
+main h2 {
+  text-align: center;
+  color: #444;
+}
+
+/* Featured Cases Section */
+.featured-cases {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.featured-cases h2 {
+  font-size: 2rem;
+  color: #3bae75;
+  margin-bottom: 20px;
+}
+
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.case-card {
+  display: block;
+  background-color: #fff;
+  border: 1px solid #3bae75;
+  padding: 20px;
+  text-align: left;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.case-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.case-card h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.case-card p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Crime Section */
+.crime-section {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+
+
+.crime-description {
+  margin: 10px 0;
+  font-size: 1.2em;
+}
+
+.case-files {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.case-file {
+  flex: 1 1 calc(45% - 10px);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.case-file h3 {
+  font-size: 1.4em;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.case-file p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Crime Details Section */
+.crime-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.crime-content {
+  flex: 1 1 60%;
+}
+
+.crime-title {
+  font-size: 2rem;
+  color: #3bae75;
+  margin-bottom: 10px;
+}
+
+.crime-summary {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.crime-info {
+  font-size: 1rem;
+  color: #555;
+}
+
+.crime-quote {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #666;
+  border-left: 4px solid #3bae75;
+  padding-left: 10px;
+  margin-top: 15px;
+}
+
+.crime-image {
+  flex: 1 1 35%;
+  text-align: center;
+}
+
+.crime-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Forklift Page */
+.forklift-section {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forklift-details {
+  margin-bottom: 20px;
+}
+
+
+.forklift-summary {
+  margin-top: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.forklift-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.forklift-buttons button {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #3bae75;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.forklift-buttons button:hover {
+  background-color: #2a8e5b;
+}
+
+blockquote {
+  font-size: 2rem;
+  font-weight: bold;
+  border-left: 4px solid;
+  padding-left: 15px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .case-file {
+    flex: 1 1 100%;
+  }
+
+  .crime-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .crime-content, .crime-image {
+    flex: 1 1 100%;
+  }
+
+  .crime-image img {
+    max-width: 80%;
+  }
+}
+
+/* Default Green Theme */
+body.green-theme {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header.green-theme {
+  background-color: #3bae75;
+}
+
+nav.green-theme {
+  background-color: #3a4b3f;
+}
+
+.featured-cases.green-theme h2 {
+  color: #982ba2;
+}
+.crime-title.green-theme {
+  color: #982ba2;
+}
+
+.case-card.green-theme {
+  border-color: #982ba2;
+}
+
+.forklift-feature.green-theme h3 {
+  color: #982ba2;
+}
+.crime-header.green-theme {
+  color: #982ba2;
+}
+.forklift-feature.green-theme {
+  color: #982ba2;
+}
+.green-theme .forklift-feature h3 {
+  color: #982ba2;
+}
+
+.forklift-buttons.green-theme button {
+  background-color: #388E3C;
+  color: white;
+}
+
+.forklift-buttons.green-theme button:hover {
+  background-color: #2C6A2F;
+}
+.green-theme blockquote {
+  color: #333;
+  border-color: #3bae75;
+}
+.sub-header.green-theme {
+  background-color: #3bae75;
+}
+.red-theme blockquote {
+  color: #333;
+  border-color: #d9534f;
+}
+
+
+/* Red Theme */
+body.red-theme {
+  background-color: #fff5f5;
+  color: rgb(35, 0, 0);
+}
+
+header.red-theme {
+  background-color: #b34747;
+}
+
+nav.red-theme {
+  background-color: #8b2e2e;
+}
+
+.featured-cases.red-theme h2 {
+  color: #3bae75;
+}
+
+.case-card.red-theme {
+  border-color: #3bae75;
+}
+
+.forklift-feature.red-theme h3 {
+  color: #3bae75;
+}
+
+.red-theme .forklift-buttons button {
+  background-color: #b34747;
+  color: white;
+}
+
+.red-theme .forklift-buttons button:hover {
+  background-color: #993e3e;
+}
+.sub-header.red-theme {
+  background-color: #b34747;
+}
+
+/* Blue Theme */
+body.blue-theme {
+  background-color: #e8f4ff;
+  color: #003366;
+}
+
+header.blue-theme {
+  background-color: #2b6cb0;
+}
+
+nav.blue-theme {
+  background-color: #1c4966;
+}
+
+.featured-cases.blue-theme h2 {
+  color: #2b6cb0;
+}
+.crime-title.blue-theme {
+  color: #2b6cb0;
+}
+.crime-header.blue-theme {
+  color: #2b6cb0;
+}
+.forklift-feature.blue-theme {
+  color: #2b6cb0;
+}
+.blue-theme .forklift-feature h3 {
+  color: #2b6cb0;
+}
+.blue-theme .forklift-buttons button {
+  background-color: #2b6cb0;
+  color: white;
+}
+.blue-theme .forklift-buttons button:hover {
+  background-color: #22568d;
+}
+.case-card.blue-theme {
+  border-color: #2b6cb0;
+}
+
+.forklift-feature.blue-theme h3 {
+  color: #2b6cb0;
+}
+
+.forklift-buttons.blue-theme button {
+  background-color: #2b6cb0;
+  color: white;
+}
+
+.forklift-buttons.blue-theme button:hover {
+  background-color: #22568d;
+}
+.blue-theme blockquote {
+  color: #333;
+  border-color: #2b6cb0;
+}
+.sub-header.blue-theme {
+  background-color: #2b6cb0;
+}

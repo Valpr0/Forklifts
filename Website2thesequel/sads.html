@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test page</title>
+    <nav>
+        <a href="something.html">Nav 1</a>
+        <a href="something.html">Nav 2</a>
+        <a href="something.html">Nav 3</a>
+    </nav>
+    <style>
+        h1 {
+            padding: 10;
+            text-align: center;
+        }
+        p {
+            padding: 10;
+            text-align: center;
+        }
+        nav {
+            background-color: greenyellow;
+            color: white;
+            list-style-type: none;
+            text-align: center;
+        }
+        a:hover {
+        transition: color 0.3s ease; 
+  background-color: #f39c12;
+  color: white;
+}
+.submit-button:hover {
+ background-color: #0056b3;
+} 
+form {
+border-style: dashed;
+background-color: blanchedalmond;
+padding: 10px;
+text-align: center;
+}
+input:hover {
+    color: aquamarine;
+}
+.imgsg {
+    padding: 5px;
+    grid-template-rows: auto;
+}
+.ex35 a:hover {
+    background-color: seagreen;
+    color: aqua;
+    transition: color 0.3s ease; 
+}
+
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+}
+
+.social-icon {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  transition: color 0.3s ease; 
+}
+
+.social-icon:hover {
+  color: #ffcc00;
+}
+
+@media (max-width: 768px) {
+nav {
+    width: 100%;
+    flex-direction: row;
+}
+}
+    </style>
+</head>
+<body>
+    <main>
+    <h1>Welcome!</h1>
+    <p>Well</p>
+
+    <section class="gallery">
+        <div class="imgsg">
+        <h2>  Sketches</h2>
+            <img src="images\bird1.jpg" alt="bird" style="width: 20%; border-radius: 8px;">
+            <img src="images\bird2.jpg" alt="bird" style="width: 20%; border-radius: 8px;">
+            <img src="images\bird3.jpg" alt="bird" style="width: 20%; border-radius: 8px;">
+            <img src="images\bird4.jpg" alt="bird" style="width: 20%; border-radius: 8px;">
+        </div>
+
+    <form action="/submit" method="post">
+       <label for="name">Name:</label>
+       <input type="text" id="name" name="name" required> <br><br>
+       <label for="email">Email:</label>
+       <input type="email" id="email" name="email" required> <br><br>
+       <input type="submit" class="submit-button"value="Submit">
+    </form>
+<button id="no">Click me</button>
+
+<script>
+document.getElementById('no').addEventListener('click', () => {
+    alert('Alert');
+  });
+</script>
+<div class="button-container">
+    <button class="red" onclick="changeBackgroundColor('red')">Red</button>
+    <button class="green" onclick="changeBackgroundColor('green')">Green</button>
+    <button class="blue" onclick="changeBackgroundColor('blue')">Blue</button>
+</div>
+
+<script>
+    function changeBackgroundColor(color) {
+        document.body.style.backgroundColor = color;
+    }
+</script>
+
+</main>
+<footer>
+    <div class="social-icons">
+      <a href="https://www.facebook.com" class="social-icon facebook">Facebook</a>
+      <a href="https://www.twitter.com" class="social-icon twitter">Twitter</a>
+      <a href="https://www.linkedin.com" class="social-icon linkedin">LinkedIn</a>
+    </div>
+  </footer>
+</body>

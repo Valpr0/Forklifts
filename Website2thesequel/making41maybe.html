@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element</title>
+    <style>
+        .element {
+            margin: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Elements</h2>
+
+    <form id="elementForm">
+        <label for="type">Type of Object:</label>
+        <select id="type" name="type" required>
+            <option value="square">Square</option>
+            <option value="rectangle">Rectangle</option>
+        </select><br><br>
+
+        <label for="width">Width (in pixels):</label>
+        <input type="number" id="width" name="width" required><br><br>
+
+        <label for="height">Height (in pixels, for rectangles only):</label>
+        <input type="number" id="height" name="height"><br><br>
+
+        <label for="color">Color of the element:</label>
+        <input type="color" id="color" name="color" required><br><br>
+
+        <label for="number">Number of elements (1-20):</label>
+        <input type="number" id="number" name="number" min="1" max="20" required><br><br>
+
+        <button type="submit">Create Elements</button>
+    </form>
+
+    <div id="output"></div>
+
+    <script>
+
+        document.getElementById('elementForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const type = document.getElementById('type').value;
+            const width = parseInt(document.getElementById('width').value);
+            const height = type === 'rectangle' ? parseInt(document.getElementById('height').value) : width;
+            const color = document.getElementById('color').value;
+            const number = parseInt(document.getElementById('number').value);
+
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+
+
+            for (let i = 0; i < number; i++) {
+                const div = document.createElement('div');
+                div.classList.add('element');
+                div.style.width = `${width}px`;
+                div.style.height = `${height}px`;
+                div.style.backgroundColor = color;
+
+                outputDiv.appendChild(div);
+            }
+        });
+    </script>
+
+</body>
+</html>
